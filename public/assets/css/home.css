@@ -212,7 +212,7 @@ nav.open ul {
 
 /* ===== LANDING SECTION ===== */
 .landing {
-  background: url('../../img/1765985383692.jpg') no-repeat center / cover;
+  background: url('../img/1765985383692.jpg') no-repeat center / cover;
   position: relative;
   height: 100vh;
 }
@@ -305,7 +305,7 @@ nav.open ul {
 .some_info {
   padding: 32px 0;
   position: relative;
-  background: url('../../img/pexels-francesco-ungaro-96444.jpg') no-repeat center / cover;
+  background: url('../img/pexels-francesco-ungaro-96444.jpg') no-repeat center / cover;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -440,8 +440,6 @@ nav.open ul {
 
 .card img {
   max-width: 100%;
-  height: 250px;
-  border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
 
@@ -613,7 +611,7 @@ nav.open ul {
     flex: 0 0 50%;
     height: 290px;
     border-radius: 10px;
-    background: url('../../img/1766162670370.jpg') no-repeat center / cover;
+    background: url('../img/1766162670370.jpg') no-repeat center / cover;
 }
 .jim .info {
     padding: 22px 0;
