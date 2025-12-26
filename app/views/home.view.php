@@ -833,9 +833,11 @@ basicHead($title, $meta, $linksCss, $fonts);
             </div>
         </div>
     </div>
-        <p class="copyright">
+        <div class="container">
+            <p class="copyright">
             جميع الحقوق محفوظة لدى فندق تشرين 2025 &copy; م.أكرم فتاح
-        </p>
+            </p>
+        </div>
     </footer>
 
     <script src="<?=JS?>home.js"></script>

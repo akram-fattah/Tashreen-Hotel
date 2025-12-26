@@ -1,8 +1,9 @@
 <?php
 
 session_start();
-
 require '../app/core/init.php';
 
-$app = new App;
-$app->loadController();
+$request = new Request();
+$app = new App();
+
+$app->run($request);
