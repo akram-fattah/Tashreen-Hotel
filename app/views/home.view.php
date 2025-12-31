@@ -143,156 +143,41 @@ basicHead($title, $meta, $linksCss, $fonts);
                 <div class="swiper-wrapper">
 
                     <!-- card -->
+                     <?php
+                        foreach ($data['res'] as $r) {
+                     ?>
                     <div class="swiper-slide card">
-                        <img src="<?=IMG?>pexels-asphotography-97083.jpg" alt="">
+                        <img src="<?=IMG?><?=$r->img?>" alt="">
                         <div class="details">
-                            <h4><a href="#">ROOM 1</a></h4>
+                            <h4><a href="#"><?=$r->name_room?></a></h4>
                             <p class="txt">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <?=$r->description?>
                             </p>
 
                             <div class="more-details">
                                 <div class="beds">
                                     <p class="bed">
                                         <i class="fas fa-bed"></i>
-                                        <span>King Bed</span>
+                                        <span><?=$r->beds?> &nbsp; سرر</span>
                                     </p>
                                     <p class="bed">
                                         <i class="fas fa-user"></i>
-                                        <span>2 Guests</span>
+                                        <span><?=$r->persons?> &nbsp; أشخاص</span>
                                     </p>
                                 </div>
                             </div>
                             <div class="foot-card">
                                 <div class="price-n">
-                                    <span class="num">343</span>
+                                    <span class="num"><?=$r->price?></span>
                                     <span>/ليلة</span>
                                 </div>
-                                <a href="#" class="book">Book Now</a> 
+                                <a href="#" class="book">احجز الان</a> 
                             </div>
 
                         </div>
                     </div>
-                    <div class="swiper-slide card">
-                        <img src="<?=IMG?>pexels-fotoaibe-1743231.jpg" alt="">
-                        <div class="details">
-                            <h4><a href="#">ROOM 1</a></h4>
-                            <p class="txt">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
 
-                            <div class="more-details">
-                                <div class="beds">
-                                    <p class="bed">
-                                        <i class="fas fa-bed"></i>
-                                        <span>King Bed</span>
-                                    </p>
-                                    <p class="bed">
-                                        <i class="fas fa-user"></i>
-                                        <span>2 Guests</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="foot-card">
-                                <div class="price-n">
-                                    <span class="num">343</span>
-                                    <span>/ليلة</span>
-                                </div>
-                                <a href="#" class="book">Book Now</a> 
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide card">
-                        <img src="<?=IMG?>pexels-pixabay-237371.jpg" alt="">
-                        <div class="details">
-                            <h4><a href="#">ROOM 1</a></h4>
-                            <p class="txt">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-
-                            <div class="more-details">
-                                <div class="beds">
-                                    <p class="bed">
-                                        <i class="fas fa-bed"></i>
-                                        <span>King Bed</span>
-                                    </p>
-                                    <p class="bed">
-                                        <i class="fas fa-user"></i>
-                                        <span>2 Guests</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="foot-card">
-                                <div class="price-n">
-                                    <span class="num">343</span>
-                                    <span>/ليلة</span>
-                                </div>
-                                <a href="#" class="book">Book Now</a> 
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide card">
-                        <img src="<?=IMG?>pexels-karlsolano-2883048.jpg" alt="">
-                        <div class="details">
-                            <h4><a href="#">ROOM 1</a></h4>
-                            <p class="txt">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-
-                            <div class="more-details">
-                                <div class="beds">
-                                    <p class="bed">
-                                        <i class="fas fa-bed"></i>
-                                        <span>King Bed</span>
-                                    </p>
-                                    <p class="bed">
-                                        <i class="fas fa-user"></i>
-                                        <span>2 Guests</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="foot-card">
-                                <div class="price-n">
-                                    <span class="num">343</span>
-                                    <span>/ليلة</span>
-                                </div>
-                                <a href="#" class="book">Book Now</a> 
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide card">
-                        <img src="<?=IMG?>pexels-pixabay-164595 (1).jpg" alt="">
-                        <div class="details">
-                            <h4><a href="#">ROOM 1</a></h4>
-                            <p class="txt">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-
-                            <div class="more-details">
-                                <div class="beds">
-                                    <p class="bed">
-                                        <i class="fas fa-bed"></i>
-                                        <span>King Bed</span>
-                                    </p>
-                                    <p class="bed">
-                                        <i class="fas fa-user"></i>
-                                        <span>2 Guests</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="foot-card">
-                                <div class="price-n">
-                                    <span class="num">343</span>
-                                    <span>/ليلة</span>
-                                </div>
-                                <a href="#" class="book">Book Now</a> 
-                            </div>
-
-                        </div>
-                    </div>
+                    <?php } ?>
                     <!-- انسخ swiper-slide لبقية الغرف -->
 
                 </div>
