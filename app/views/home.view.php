@@ -147,7 +147,7 @@ basicHead($title, $meta, $linksCss, $fonts);
                         foreach ($data['res'] as $r) {
                      ?>
                     <div class="swiper-slide card">
-                        <img src="<?=IMG?><?=$r->img?>" alt="">
+                        <img src="<?=IMG?><?=$r->img?>" alt="" loading="lazy">
                         <div class="details">
                             <h4><a href="#"><?=$r->name_room?></a></h4>
                             <p class="txt">
@@ -304,18 +304,16 @@ basicHead($title, $meta, $linksCss, $fonts);
             </div>
             <div class="container">
                 <div class="gallary-img">
-                    <img src="<?=IMG?>pexels-pixabay-161758.jpg" alt="">
-                    <img src="<?=IMG?>pexels-pixabay-164595 (1).jpg" alt="">
-                    <img src="<?=IMG?>pexels-asphotography-97083.jpg" alt="">
-                    <img src="<?=IMG?>pexels-karlsolano-2883048.jpg" alt="">
-                    <img src="<?=IMG?>pexels-fotoaibe-1743231.jpg" alt="">
-                    <img src="<?=IMG?>pexels-francesco-ungaro-96444.jpg" alt="">
-                    <img src="<?=IMG?>pexels-pixabay-164595.jpg" alt="">
-                    <img src="<?=IMG?>pexels-pixabay-237371.jpg" alt="">
-                    <img src="<?=IMG?>pexels-pixabay-258154.jpg" alt="">
-                    <img src="<?=IMG?>pexels-pixabay-271619.jpg" alt="">
-                    <img src="<?=IMG?>1765961791077.jpg" alt="">
-                    <img src="<?=IMG?>1765961791103.jpg" alt="">
+                    <!-- Fetching 22 images from DB -->
+                    <?php 
+                        if(isset($data['photos'])) {
+                            $photos = $data['photos'];
+                            foreach ($photos as $photo) {
+                    ?>
+
+                        <img src="<?=IMG?><?=$photo->img?>" alt="" loading="lazy">
+
+                    <?php }}?>
                 </div>
                 <a href="" class="all-img">كل الصور</a>
             </div>

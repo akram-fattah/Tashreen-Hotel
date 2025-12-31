@@ -2,12 +2,12 @@
 
 class Rooms extends Model{
     public function rooms() {
-        return $this->selectALl();
+        $q = "SELECT * FROM rooms ORDER BY RAND()";
+        return $this->selectALl($q);
     }
-    public function getPhoto($id) {
-        $q = "SELECT * FROM rooms_photo WHERE room_id = ?";
-        return $this->query($q, [
-            $id
-        ]);
+
+    public function getAllPhotos() {
+        $q = "SELECT img FROM rooms ORDER BY RAND() LIMIT 22";
+        return $this->selectALl($q);
     }
 }
