@@ -10,4 +10,8 @@ class Rooms extends Model{
         $q = "SELECT img FROM rooms ORDER BY RAND() LIMIT 22";
         return $this->selectALl($q);
     }
+    public function customersVoice() {
+        $q = "SELECT * FROM customers_vioce ORDER BY RAND()";
+        return $this->selectALl($q);
+    }
 }

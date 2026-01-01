@@ -699,15 +699,12 @@ nav.open ul {
 .guests .swiper-slide {
     flex: 0 0 (100%) / 3;
 }
-.guests .stars {
-    color: #e7810c;
-    padding: 22px 34px 12px;
-    font-weight: 700;
-}
+
 .guests .txt {
     flex-grow: 1;
-}
-.guests .stars-foot-card {
+    padding-top: 8px;
+  }
+  .guests .stars-foot-card {
     display: flex;
     align-items: center;
     gap: 12px;

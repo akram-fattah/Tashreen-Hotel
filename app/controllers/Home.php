@@ -5,9 +5,12 @@ class Home extends Controller {
         $model = new Rooms();
         $res =  $model->rooms();
         $photos = $model->getAllPhotos();
+        $customersVoice = $model->customersVoice();
+
         $this->view('home', [
             'res' => $res,
-            'photos' => $photos
+            'photos' => $photos,
+            'customersVoice' => $customersVoice
         ]);
     }
 }

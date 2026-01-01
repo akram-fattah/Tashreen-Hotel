@@ -335,238 +335,36 @@ basicHead($title, $meta, $linksCss, $fonts);
             <div class="swiper" id="cards">
                 <div class="swiper-wrapper">
                     <!-- card -->
+                    <?php
+                        if(isset($data['customersVoice'])) {
+                            $voices = $data['customersVoice'];
+                            foreach ($voices as $voice) {
+                    ?>
                         <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
 
+                            <div class="details">
                                 <div class="stars-foot-card">
                                     <div>
-                                        <img src="<?=IMG?>customers/pexels-ahcapture-29560418.jpg" alt="">
+                                        <img src="<?=IMG?>customers/<?=$voice->img?>" alt="">
                                     </div>
                                     <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
+                                        <h3><?=$voice->name_customer?></h3>
+                                        <span><?=$voice->date?></span>
                                         <span>-</span>
-                                        <span>صنعاء</span>
+                                        <span><?=$voice->place?></span>
                                     </div>
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
                                 <q class="txt">
                                     <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
+                                        <?=$voice->voice?>
                                     </i>
                                 </q>
 
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-ron-lach-9604304.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-anthonyshkraba-production-8973506.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-cottonbro-8718350.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-italo-melo-881954-2379005.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-jordan-bergendahl-2628960-10402659.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-moh-adbelghaffar-14267039.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide card">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <q class="txt">
-                                    <i>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, necessitatibus.
-                                    </i>
-                                </q>
-
-                                <div class="stars-foot-card">
-                                    <div>
-                                        <img src="<?=IMG?>customers/pexels-ron-lach-10412892.jpg" alt="">
-                                    </div>
-                                    <div class="names">
-                                        <h3>أكرم فتاح</h3>
-                                        <span>2026-8-4</span>
-                                        <span>-</span>
-                                        <span>صنعاء</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        <?php }} ?>
                     <!-- انسخ swiper-slide لبقية الغرف -->
                 </div>
             </div>
