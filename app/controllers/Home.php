@@ -49,6 +49,51 @@ class Home extends Controller {
                     $errInfo = isset($mail) ? $mail->ErrorInfo : '';
                     $_SESSION['mail_status'] = 'خطأ أثناء الإرسال: ' . ($errInfo ?: 'حدث خطأ غير متوقع.');
                 }
+
+                function escapeMarkdownV2($text) {
+                $specialChars = '_*[]()~`>#+-=|{}.!';
+                $escaped = '';
+                for ($i = 0; $i < mb_strlen($text); $i++) {
+                    $char = mb_substr($text, $i, 1);
+                    if (strpos($specialChars, $char) !== false) {
+                        $escaped .= '\\' . $char;
+                    } else {
+                        $escaped .= $char;
+                    }
+                }
+                return $escaped;
+            }
+
+
+                $messageLines = explode("\n", $message);
+                $quotedMessage = '';
+                $first = escapeMarkdownV2($first);
+                $last = escapeMarkdownV2($last);
+                $email = escapeMarkdownV2($email);
+                $phone = escapeMarkdownV2($phone);
+
+                $quotedMessage = '';
+                foreach (explode("\n", $message) as $line) {
+                    $quotedMessage .= '> ' . escapeMarkdownV2($line) . "\n";
+                }
+
+                $telegramMessage = "📩 رسالة جديدة من النموذج\n\n*Taghreen Hotel*\n\n*الاسم:* *$first $last*\n*الإيميل:* $email\n*الهاتف:* $phone\n*الرسالة:*\n$quotedMessage";
+
+                $data = json_encode([
+                    'chat_id' => '5198984934',
+                    'text' => $telegramMessage,
+                    'parse_mode' => 'MarkdownV2'
+                ], JSON_UNESCAPED_UNICODE);
+
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot/sendMessage");
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                $response = curl_exec($ch);
+                curl_close($ch);
+
             }
 
             header('Location: ' . $_SERVER['REQUEST_URI'] . '#sendMail');
