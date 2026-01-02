@@ -421,30 +421,33 @@ basicHead($title, $meta, $linksCss, $fonts);
                     </div>
                 </div>
             </div>
-            <div class="form">
+            <div class="form" id="sendMail">
+                <?php if (!empty($_SESSION['mail_status'])): ?>
+                    <div class="mail-status"><?php echo $_SESSION['mail_status']; unset($_SESSION['mail_status']); ?></div>
+                <?php endif; ?>
                 <form action="" method="post">
                     <div class="form-container">
                         <div class="first-last-name">
                             <div>
                                 <label for="">الاسم الاول</label>
-                                <input type="text" name="" id="" placeholder="الاسم">
+                                <input type="text" name="first_name" id="" placeholder="الاسم">
                             </div>
                             <div>
                                 <label for="">اللقب</label>
-                                <input type="text" name="" id="" placeholder="اللقب">
+                                <input type="text" name="last_name" id="" placeholder="اللقب">
                             </div>
                         </div>
                         <div class="email">
                             <label for="">البريد الاكتروني</label>
-                            <input type="email" name="" id="" placeholder="البريد الالكتروني">
+                            <input type="email" name="email" id="" placeholder="البريد الالكتروني">
                         </div>
                         <div class="phone">
                             <label for="">رقم هاتفك</label>
-                            <input type="phone" name="" id="" placeholder="رقم الموبايل">
+                            <input type="phone" name="phone" id="" placeholder="رقم الموبايل">
                         </div>
                         <div class="message">
                             <label for="">الرسالة</label>
-                            <textarea name="" id="" placeholder="اكتب رسالة"></textarea>
+                            <textarea name="message" id="" placeholder="اكتب رسالة"></textarea>
                         </div>
                         <div class="btn">
                             <input type="submit" value="ارسال الرسالة">

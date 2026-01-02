@@ -945,6 +945,18 @@ footer .footer-info form input::placeholder{
     color: #4158d0;
 }
 
+
+.mail-status {
+  color: #f3f3f3;
+  background-color: #444; 
+  text-align: center; 
+  padding: 14px; 
+  margin-bottom: 16px; 
+  border-radius: 7px;
+}
+
+
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Mobile Devices (300px - 768px) */

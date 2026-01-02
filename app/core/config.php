@@ -11,3 +11,12 @@ define("HOST", "localhost");
 define("USER", "root");
 define("PASS", "");
 define("DB", "TashreenDB");
+
+// Mail settings (fill MAIL_PASS with your SMTP password or app password)
+define("MAIL_HOST", "smtp.gmail.com");
+define("MAIL_USER", "akramfattah88@gmail.com");
+define("MAIL_PASS", "");
+define("MAIL_PORT", 587);
+define("MAIL_SMTP_SECURE", "tls");
+define("MAIL_FROM", "akramfattah88@gmail.com");
+define("MAIL_FROM_NAME", "Tashreen Hotel");
