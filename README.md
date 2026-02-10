@@ -1,23 +1,93 @@
-# Tashreen-Hotel
-This is mvc project by pure php, mysql , html, css, js
+# نظام إدارة فندق تشرين (Tashreen Hotel Management System)
 
-I m not add a lot of features becouse that just for traing it is not as product, 
-but it need some edites and enhancment 
+نظام متكامل لإدارة الفنادق تم بناؤه باستخدام لغة **PHP** الخام باتباع نمط المعمارية **MVC** (Model-View-Controller)، مما يضمن تنظيماً عالياً للكود وسهولة في التوسع والتطوير.
 
-Featuers I Can Add it in futuer:
-1 validation inputs in front end by javascript
-2 add page for room and add bookin for any room
-3 add notify for customer in whatsapp and telegram or sms by twilio
-4 add newletter
-5 page for rooms images just
-6 authenticated and autherzation
+---
 
+## 🚀 نظرة عامة على المشروع
 
-----------------------------
-All featuers that above not implemented yet Becouse I just write this program as a jooking 
-when i  learn another thing ..
+يعد مشروع **فندق تشرين** تطبيق ويب يهدف إلى محاكاة أنظمة إدارة الفنادق الحديثة. تم التركيز في هذا المشروع على تطبيق مفاهيم البرمجة كائنية التوجه (OOP) وفصل المهام بين طبقات العرض والمنطق وقواعد البيانات.
 
-That not mean I can t added more , But I dont like project for just github repo it is very boring
+---
 
-Dev. Akram Fattah - Yemen Hodaidah.
-See you soon :)
+## ✨ المميزات الحالية
+
+*   **معمارية MVC:** هيكلة احترافية للمشروع تفصل بين منطق العمل (Logic) وواجهات العرض (UI).
+*   **نظام التوجيه (Routing):** نظام توجيه مخصص للتعامل مع الروابط بشكل نظيف.
+*   **إدارة قواعد البيانات:** تكامل تام مع MySQL باستخدام PDO لضمان الأمان.
+*   **نظام الإشعارات:** دعم إرسال الإشعارات عبر:
+    *   **البريد الإلكتروني:** باستخدام مكتبة PHPMailer.
+    *   **تليجرام:** تكامل مع Telegram Bot API لإرسال التنبيهات.
+*   **واجهة مستخدم متجاوبة:** تصميم عصري باستخدام HTML5, CSS3, و JavaScript.
+
+---
+
+## 🛠 التقنيات المستخدمة
+
+| التقنية | الوصف |
+| :--- | :--- |
+| **PHP 8.x** | اللغة الأساسية لتطوير المنطق الخلفي (Backend). |
+| **MySQL** | نظام إدارة قواعد البيانات. |
+| **MVC Pattern** | نمط التصميم المتبع في هيكلة المشروع. |
+| **PHPMailer** | لإدارة عمليات إرسال البريد الإلكتروني. |
+| **Telegram API** | لإرسال الإشعارات الفورية. |
+| **JavaScript** | لإضافة التفاعلية في الواجهات الأمامية. |
+
+---
+
+## 📂 هيكلية المشروع
+
+```text
+Tashreen-Hotel/
+├── app/                # المجلد الأساسي للتطبيق
+│   ├── controllers/    # المتحكمات (Controllers)
+│   ├── core/           # النواة (App, Database, Router, Config)
+│   ├── models/         # النماذج (Models)
+│   ├── service/        # الخدمات الإضافية (Email, Telegram)
+│   └── views/          # واجهات العرض (Views)
+├── public/             # الملفات العامة (index.php, assets)
+│   └── assets/         # الصور، ملفات CSS، وملفات JS
+├── mailer/             # مكتبة PHPMailer
+├── tashreendb.sql      # ملف قاعدة البيانات
+└── composer.json       # إدارة التبعيات
+```
+
+---
+
+## ⚙️ كيفية التثبيت والتشغيل
+
+1.  **استنساخ المستودع:**
+    ```bash
+    git clone https://github.com/akram-fattah/Tashreen-Hotel.git
+    ```
+2.  **إعداد قاعدة البيانات:**
+    *   قم بإنشاء قاعدة بيانات جديدة باسم `TashreenDB`.
+    *   قم باستيراد ملف `tashreendb.sql` الموجود في المجلد الرئيسي.
+3.  **الإعدادات (Configuration):**
+    *   توجه إلى الملف `app/core/config.php`.
+    *   قم بتعديل بيانات الاتصال بقاعدة البيانات ورابط المشروع الأساسي (`ROOT`).
+4.  **التشغيل:**
+    *   تأكد من توجيه الخادم (Apache/Nginx) إلى مجلد `public`.
+
+---
+
+## 📅 خطة التطوير المستقبلية
+
+يسعى المشروع لإضافة الميزات التالية في التحديثات القادمة:
+- [ ] إضافة نظام التحقق من المدخلات (Validation) في الواجهة الأمامية.
+- [ ] تطوير صفحة خاصة لكل غرفة مع نظام حجز متكامل.
+- [ ] تفعيل نظام المصادقة والصلاحيات (Auth & Authorization).
+- [ ] إضافة إشعارات عبر WhatsApp و SMS (بواسطة Twilio).
+- [ ] إنشاء معرض صور متطور للغرف.
+
+---
+
+## 👨‍💻 المطور
+
+**أكرم فتاح (Akram Fattah)**
+*   📍 اليمن - الحديدة
+*   📧 البريد الإلكتروني: akramfattah88@gmail.com
+
+---
+
+> **ملاحظة:** هذا المشروع تم تطويره كجزء من التدريب على بناء أنظمة MVC من الصفر، وهو قابل للتطوير والتحسين المستمر.
